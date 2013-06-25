@@ -6,9 +6,9 @@ describe "Static pages" do
 		visit '/static_pages/home'
 		page.should have_selector('h1', :text => 'Sample App')
 	end
-	it "should have the title 'Home'" do
+	it "should not have the title 'Home'" do
 		visit '/static_pages/home'
-		page.should have_selector('title',
+		page.should_not have_selector('title',
 		:text => "Sample App | Home")
 	end
   end
